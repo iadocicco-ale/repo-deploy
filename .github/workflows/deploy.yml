@@ -14,6 +14,6 @@ jobs:
        runs-on: ubuntu-latest
        steps:
             - name: Deploy no ambiente
-              run: echo "Executando o deploy no ambiente de ${{ inputs.ambiente || github.event.client_payload.ambiente }}"
+              run: echo "Executando o deloy no ambiente de ${{ inputs.ambiente || github.event.client_payload.ambiente }}"
             - name: Curl Deploy no ambiente
               run: "curl -X POST https://webhook.site/5a51c018-d468-43f7-83c3-a1fd832ac068 -d '{ ambiente: ${{ inputs.ambiente || github.event.client_payload.ambiente }}}'"
